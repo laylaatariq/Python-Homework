@@ -14,17 +14,25 @@ def load_file(filepath, number):
         #Variable
         num_words  = 0
         sentence_count = 0
+        char_count = 0
 
         for line in text_file:
             words = line.split()
             sentences = line.split(".")
             num_words += len(words)
             sentence_count += len(sentences)
-
+            for c in line:
+                if c.isspace() != True:
+                    char_count += 1
+            average = char_count/num_words
+    
+    print(average)
     #Outputing Results to the Screen
-    print("Paragraph Analysis")
-    print(f"Word count in File {number} is {num_words}")
-    print(f"Sentence count is in File {number} is {sentence_count}")
+    print(f"Paragraph Analysis File Number {number}")
+    print("-------------------------------------")
+    print(f"Approximate Word Count: {num_words}")
+    print(f"Approximate Sentence Count {sentence_count}")
+    print("\n")
 
 
 #Defining file path
