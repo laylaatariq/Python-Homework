@@ -21,8 +21,7 @@ def load_file(filepath, number):
             num_words += len(words)
             sentence_count += len(sentences)
 
-        #Returning data to the variable after reading from the file
-        #return text_file_handler.read().lower().split()
+    #Outputing Results to the Screen
     print("Paragraph Analysis")
     print(f"Word count in File {number} is {num_words}")
     print(f"Sentence count is in File {number} is {sentence_count}")
