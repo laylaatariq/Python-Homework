@@ -15,6 +15,7 @@ def load_file(filepath, number):
         num_words  = 0
         sentence_count = 0
         char_count = 0
+        wordsCount = []
 
         for line in text_file:
             words = line.split()
@@ -24,14 +25,19 @@ def load_file(filepath, number):
             for c in line:
                 if c.isspace() != True:
                     char_count += 1
-            average = char_count/num_words
+            average = round(char_count/num_words, 2)
+            for sentence in sentences:
+                Words = sentence.split(" ")
+                wordsCount.append(len(Words))
+            average_sentence = round(sum(wordsCount)/len(wordsCount), 1)
     
-    print(average)
     #Outputing Results to the Screen
     print(f"Paragraph Analysis File Number {number}")
     print("-------------------------------------")
     print(f"Approximate Word Count: {num_words}")
-    print(f"Approximate Sentence Count {sentence_count}")
+    print(f"Approximate Sentence Count: {sentence_count}")
+    print(f"Approximate Letter Count: {average}")
+    print(f"Average Sentence Length: {average_sentence}")
     print("\n")
 
 
