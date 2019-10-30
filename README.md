@@ -36,3 +36,14 @@ This repo is consists of the the following folders:
     * The DOB data should be re-written into MM/DD/YYYY format.
     * The SSN data should be re-written such that the first five numbers are hidden from view.
     * The State data should be re-written as simple two-letter abbreviations.
+
+**PyParagraph**
+1. Resources folder which contains the text files for input.
+2. The main python file that contains the code that runs over the csv file to perform certain tasks.
+3. Following are the tasks performed:
+    * Approximate word count
+    * Approximate sentence count
+    * Approximate letter count (per word)
+    * Average sentence length (in words)
+
+
